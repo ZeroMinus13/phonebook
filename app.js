@@ -15,7 +15,7 @@ app.use(morgan(':method :url :status :response-time ms - :res[content-length] :b
 
 // routes
 app.get('/', (req, res) => {
-  res.json('<h1>Hello</h1>');
+  res.send('<h1>Hello</h1>');
 });
 
 app.get('/api/people', (req, res) => {
