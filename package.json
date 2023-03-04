@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.21"
+  },
+  "name": "learn-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node app.js",
+    "dev": "nodemon app.js",
+    "build:ui": "rmdir /S /Q dist && cd ..\\ && npm run build && xcopy /E /Y dist .\\backend\\dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZeroMinus13",
+  "license": "ISC",
+  "description": ""
+}
