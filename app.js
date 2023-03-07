@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const mongoose = require('mongoose');
 let PhoneBook = require('./mongo');
 
 app.use(cors());
@@ -31,9 +30,6 @@ app.post('/api/people', (req, res) => {
   let { name, number } = req.body;
   if (!name || !number) {
     return response.status(400).json({ error: 'content missing' });
-  }
-  if (PhoneBook.findOne({ name: name })) {
-    return res.json({ error: 'Name Already Exists' });
   }
   const phone = new PhoneBook({ name, number });
   phone.save().then((phone) => {

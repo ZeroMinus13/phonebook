@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-let data = 5;
+
 const url = process.env.mongodb;
 
 mongoose.set('strictQuery', false);
